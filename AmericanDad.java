@@ -18,7 +18,7 @@ public class AmericanDad extends AppCompatActivity {
 
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_american_dad);
         paintView = (PaintView) findViewById(R.id.paintView);
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);

@@ -18,7 +18,7 @@ public class RickMorty extends AppCompatActivity {
 
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_rick_morty);
         paintView = (PaintView) findViewById(R.id.paintView);
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);

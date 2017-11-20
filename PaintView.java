@@ -39,6 +39,7 @@ public class PaintView extends View {
     private Bitmap mBitmap;
     private Canvas mCanvas;
     private Paint mBitmapPaint = new Paint(Paint.DITHER_FLAG);
+    private int colorCursor = Color.RED;
 
     public PaintView(Context context) {
         this(context, null);
@@ -58,6 +59,10 @@ public class PaintView extends View {
 
         mEmboss = new EmbossMaskFilter(new float[] {1, 1, 1}, 0.4f, 6, 3.5f);
         mBlur = new BlurMaskFilter(5, BlurMaskFilter.Blur.NORMAL);
+    }
+
+    public void setColor(int color){
+        mPaint.setColor(color);
     }
 
     public void init(DisplayMetrics metrics) {
@@ -96,7 +101,7 @@ public class PaintView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         canvas.save();
-        mCanvas.drawColor(backgroundColor);
+       mCanvas.drawColor(backgroundColor);
 
         for (FingerPath fp : paths) {
             mPaint.setColor(fp.color);

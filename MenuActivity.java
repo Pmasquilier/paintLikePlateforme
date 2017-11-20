@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -34,14 +35,16 @@ public class MenuActivity extends AppCompatActivity {
         btnGoToRejoindreChampionnat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MenuActivity.this, SimpsonActivity.class));
+
+                Toast.makeText(MenuActivity.this, "ICI", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MenuActivity.this, RickMorty.class));
             }
         });
 
         btnDeconnexion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MenuActivity.this, RickMorty.class));
+                startActivity(new Intent(MenuActivity.this, FuturamaActivity.class));
             }
 
 
@@ -50,7 +53,7 @@ public class MenuActivity extends AppCompatActivity {
         btnGoToMonProfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MenuActivity.this, FuturamaActivity.class));
+                startActivity(new Intent(MenuActivity.this, SimpsonActivity.class));
             }
         });
 
