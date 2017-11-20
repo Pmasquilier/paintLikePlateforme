@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 public class MenuActivity extends AppCompatActivity {
 
-    Button btnGoToMonProfil, btnGoToCreerChampionnat, btnGoToRejoindreChampionnat, btnDeconnexion, btnAmericanDad;
+    Button btnDessinVierge, btnFuturama, btnSimpson, btnRickMorty, btnAmericanDad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,30 +18,28 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        btnGoToMonProfil = (Button) findViewById(R.id.btn_go_to_mon_profil);
-        btnGoToCreerChampionnat = (Button) findViewById(R.id.btn_go_to_creer_championnat);
-        btnGoToRejoindreChampionnat = (Button) findViewById(R.id.btn_go_to_rejoindre_championnat);
-        btnDeconnexion = (Button) findViewById(R.id.btn_deconnexion);
-        btnAmericanDad = (Button) findViewById(R.id.american_dad);
+        btnDessinVierge = (Button) findViewById(R.id.dessin_vierge);
+        btnFuturama = (Button) findViewById(R.id.bouton_futurama);
+        btnSimpson = (Button) findViewById(R.id.bouton_simpson);
+        btnRickMorty = (Button) findViewById(R.id.bouton_rickmorty);
+        btnAmericanDad = (Button) findViewById(R.id.bouton_americandad);
 
 
-        btnGoToCreerChampionnat.setOnClickListener(new View.OnClickListener() {
+        btnDessinVierge.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MenuActivity.this, MainActivity.class));
             }
         });
 
-        btnGoToRejoindreChampionnat.setOnClickListener(new View.OnClickListener() {
+        btnRickMorty.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Toast.makeText(MenuActivity.this, "ICI", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MenuActivity.this, RickMorty.class));
             }
         });
 
-        btnDeconnexion.setOnClickListener(new View.OnClickListener() {
+        btnFuturama.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MenuActivity.this, FuturamaActivity.class));
@@ -50,7 +48,7 @@ public class MenuActivity extends AppCompatActivity {
 
         });
 
-        btnGoToMonProfil.setOnClickListener(new View.OnClickListener() {
+        btnSimpson.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MenuActivity.this, SimpsonActivity.class));

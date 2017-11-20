@@ -14,7 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-public class SimpsonActivity extends Activity {
+public class SimpsonActivity extends AppCompatActivity{
 
 
     private PaintView paintView;
@@ -25,7 +25,7 @@ public class SimpsonActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_simpson);
         Toast.makeText(this, "Simpsons", Toast.LENGTH_SHORT).show();
-        paintView = (PaintView) findViewById(R.id.paintView);
+        paintView = (PaintView) findViewById(R.id.paintViewSimpson);
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
         paintView.init(metrics);
